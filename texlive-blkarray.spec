@@ -1,3 +1,9 @@
+# revision 17089
+# category Package
+# catalog-ctan /macros/latex/contrib/blkarray
+# catalog-date 2010-02-23 16:09:16 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-blkarray
 Version:	20100223
 Release:	1
@@ -46,6 +52,7 @@ blockarray.
 %doc %{_texmfdistdir}/doc/latex/blkarray/README
 %doc %{_texmfdistdir}/doc/latex/blkarray/blkarray.pdf
 %doc %{_texmfdistdir}/doc/latex/blkarray/blkarray.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ blockarray.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
