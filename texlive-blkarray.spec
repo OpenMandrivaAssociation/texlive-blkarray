@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-blkarray
 Version:	20100223
-Release:	4
+Release:	5
 Summary:	Extended array and tabular
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/blkarray
