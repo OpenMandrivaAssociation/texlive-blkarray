@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-blkarray
-Version:	20100223
-Release:	10
+Version:	0.07
+Release:	1
 Summary:	Extended array and tabular
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/blkarray
