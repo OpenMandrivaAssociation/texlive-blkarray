@@ -1,18 +1,12 @@
-# revision 17089
-# category Package
-# catalog-ctan /macros/latex/contrib/blkarray
-# catalog-date 2010-02-23 16:09:16 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-blkarray
-Version:	0.07
-Release:	2
+Version:	36406
+Release:	1
 Summary:	Extended array and tabular
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/blkarray
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blkarray.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blkarray.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blkarray.r36406.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/blkarray.doc.r36406.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ main array. What's more, the \footnote command works inside a
 blockarray.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,25 +40,10 @@ blockarray.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100223-2
-+ Revision: 749768
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100223-1
-+ Revision: 717953
-- texlive-blkarray
-- texlive-blkarray
-- texlive-blkarray
-- texlive-blkarray
-- texlive-blkarray
-
